@@ -1,0 +1,39 @@
+{
+    "schema": 1.1,
+    "description": "AISecBotV2",
+    "type": "completion",
+    "completion": {
+        "model": "gpt-4o",
+        "completion_type": "chat",
+        "include_history": true,
+        "include_input": true,
+        "data_sources": [
+            {
+                "type": "azure_search",
+                "parameters": {
+                    "endpoint": "https://security-rag.search.windows.net",
+                    "index_name": "mitre-index",
+                    "semantic_configuration": "default",
+                    "query_type": "semantic",
+                    "fields_mapping": {},
+                    "in_scope": true,
+                    "role_information": "",
+                    "strictness": 3,
+                    "top_n_documents": 5,
+                    "authentication": {
+                        "type": "api_key",
+                        "key": "<INPUT-YOUR-KEY-HERE>"
+                    }
+                }
+            }
+        ],
+        "stop_sequences": null,
+        "temperature": 0.7,
+        "top_p": 0.95,
+        "max_tokens": 800,
+        "input_max_tokens": 128000
+    },
+    "augmentation": {
+        "augmentation_type": "none"
+    }
+}
