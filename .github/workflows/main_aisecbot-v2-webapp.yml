@@ -68,4 +68,4 @@ jobs:
         with:
           app-name: 'AISecBot-V2-WebApp'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_E0176BFA58A549699571D8A04B9A529B }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_B3B7EE4A8D804E7C94D861F7BAD163CB }}
